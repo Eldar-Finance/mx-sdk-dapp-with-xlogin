@@ -1,0 +1,20 @@
+name: telegram message
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: -1001965421430
+          token: 6165290967:AAF3iJDXIBwpQ6BrCOWdE0AhfRLHZKN1RDA
+          message: |
+            Commit by:   ${{github.actor}}
+            On repo:       Hackathon
+            On branch:   ${{github.ref_name}}
+            Message:      ${{github.event.commits[0].message}}
+
+            https://github.com/${{github.repository}}/commit/${{github.sha}}
