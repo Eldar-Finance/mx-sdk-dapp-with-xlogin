@@ -13,7 +13,7 @@ jobs:
           token: 6165290967:AAF3iJDXIBwpQ6BrCOWdE0AhfRLHZKN1RDA
           message: |
             Commit by:   ${{github.actor}}
-            On repo:       Hackathon
+            On repo:       sdk-dapp-with-xlogin
             On branch:   ${{github.ref_name}}
             Message:      ${{github.event.commits[0].message}}
 
